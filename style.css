@@ -6,6 +6,7 @@
 body{
     margin:0;
     padding:0;
+    width:100%;
 }
 
 .navbar{
@@ -77,14 +78,18 @@ input{
     
 }
 
+.rootContainer{
+    width:100%;
+}
+
 
 .container{
     display:flex;
     height:500px;
     background-color:white;
-    width:auto;
+    width:93%;
     justify-content:space-between;
-    margin:30px 70px;
+    margin:auto;
     box-shadow: 0 0 12px rgb(185, 181, 181);
     border-radius:34px;
     margin-top:130px;
@@ -259,3 +264,79 @@ input{
 .icon:hover{
     cursor:pointer;
 }
+
+@media all and (max-width:1450){
+    .navbar{
+        display:flex;
+        flex-wrap:wrap;
+        position:absolute;
+    }
+    .container{
+        margin-top:210px;
+    }
+}
+@media all and (max-width:800){
+    .container{
+        margin-top:270px;
+        margin-bottom:40px;
+    }
+    .navbar img{
+        width:125px;
+        margin:0 auto;
+    }
+}
+
+@media all and (max-width:613){
+    input{
+        width:250px;
+    }
+    .navbar-items ul{
+        flex-wrap:wrap;
+    }
+}
+@media all and (max-width:950){
+    .text-container,.Header{
+        font-size:12px;
+    }
+    .container{
+        display:flex;
+        flex-wrap:wrap;
+    }
+}
+
+@media all and (max-width:550){
+    .text-container{
+        width:70%;
+    }
+    .img-container{
+        width:30%;
+    }
+}
+
+@media all and (max-width:490){
+    .container{
+        margin-top:330px;
+    }
+}
+
+@media all and (max-width:490){
+    .container{ 
+        margin-top:250px;
+    }
+    input{
+        width:200px;
+    }
+}
+
+@media all and (max-width:430){
+    .container{ 
+        margin-top:350px;
+    }
+    input{
+        width:200px;
+    }
+}
+
+
+
+
