@@ -1,4 +1,4 @@
-export default resdata=[
+const resdata=[
     {
         "info": {
             "id": "739040",
@@ -502,3 +502,5 @@ export default resdata=[
         "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
     }
     ]
+
+    export default resdata;
