@@ -1,22 +1,28 @@
 import React from "react"
 import ReactDOM from "react-dom";
+import resdata from "./resdata.js";
 
-const Card =(n)=>(
+const Card =(props)=>{
+    const{resData}=props;
+    const {name,avgRating,locality,cuisines,areaName,cloudinaryImageId}=resData?.info;
+
+    return(
     <div className="card">
-        <img className="menuImg" src="https://i2.wp.com/glamouraspirit.com/wp-content/uploads/2020/09/untitled-5264_orig.jpg?resize=1024%2C682&ssl=1"/>
+        <img className="menuImg" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_112,h_112,c_fill/"+cloudinaryImageId}/>
         <div className="cardInfo">
-            <h1 className="Name">{n}</h1>
-            <h3 className="Cusine">North Indian | Chinese | Continental</h3>
+            <h1 className="Name">{name}</h1>
+            <h3 className="Cusine">{cuisines.join(", ")}</h3>
             <div className="RateInfo">
                 <div className="location">
-                    <p>Patia,Bhubaneswar</p>
-                    <p>Eta: 19 min</p>
+                    <p>{locality}</p>
+                    <p>{areaName}</p>
                 </div>
-                <h4>⭐4.5</h4>
+                <h4>⭐{avgRating}</h4>
             </div>
         </div>
     </div>
 )
+}
 
 export default function Body()
 {
@@ -37,14 +43,13 @@ export default function Body()
                     <h1>Explore Today's Favourite...</h1>
                 </div>
                 <div className="cardList">
-                    {Card("Seventh Heaven")}
-                    {Card("99 North")}
-                    {Card("Kaveri")}
-                    {Card("Biryani House")}
-                    {Card("Nirvana")}
-                    {Card("Chronicles")}
-                    {Card("Dine Heights")}
-                    
+                    {
+                        resdata.map(
+                            (x)=>(
+                                <Card resData={x}/>
+                            )
+                        )
+                    }                
                 </div>
             </div>
         </div>

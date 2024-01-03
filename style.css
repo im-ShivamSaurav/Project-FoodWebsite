@@ -57,25 +57,28 @@ a{
 }
 
 input{
-    border: 1px solid gray;
+    border: 2px solid black;
     margin:20px;
-    margin-right:0;
+    margin-right:-62px;
     padding:1em;
     width:500px;
-    border-top-left-radius:24px;
-    border-bottom-left-radius:24px;
+    border-radius:24px;
+    /* border-top-left-radius:24px; */
+    /* border-bottom-left-radius:24px; */
     font-size:13px;
     font-weight:bold;
+    padding-right:45px;
 }
 
 .srch-button{
-    padding:.9em;
+    padding:.8em;
     margin:20px;
-    margin-left:0;
-    border-top-right-radius:24px;
-    border-bottom-right-radius:24px;
-    width:70px;
-    border: 1px solid gray;
+    /* margin-left:0; */
+    border-radius:50%;
+    /* border-top-right-radius:24px;
+    border-bottom-right-radius:24px; */
+    width:auto;
+    border: 2px solid black;
     background-color:whitesmoke;
     
 }
@@ -185,10 +188,10 @@ input{
 
 .card{
     background:white;
-    border-radius:34px;
-    box-shadow: 0 0 12px rgb(185, 181, 181);
+    border-radius:33px;
     line-height:17px;
     margin:20px;
+    box-shadow: 0 0 12px rgb(185, 181, 181);
 }
 
 .cardInfo{
@@ -201,7 +204,7 @@ input{
 }
 
 .Name{
-    font-family:"Pacifico";
+    font-family:"Monospace";
     font-size:24px;
 }
 
@@ -211,6 +214,11 @@ input{
     margin-right: 22px;
     margin-bottom:12px;
     line-height:8px;
+}
+
+.location p{
+    color:rgb(55, 55, 55);
+    font-family:'Times New Roman', Times, serif;
 }
 
 .card:hover{
