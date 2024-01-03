@@ -15,7 +15,7 @@ export default function Navbar()
             <div className="navbar-items">
                 <ul>
                     <li>Home</li>
-                    <li>Contact</li>
+                    <li><a href="#insta">Contact</a></li>
                     <li>Profile</li>
                     <li>🛒</li>
                 </ul>

@@ -1,11 +1,11 @@
 import React from "react"
 import ReactDOM from "react-dom";
 
-const Card =()=>(
+const Card =(n)=>(
     <div className="card">
         <img className="menuImg" src="https://i2.wp.com/glamouraspirit.com/wp-content/uploads/2020/09/untitled-5264_orig.jpg?resize=1024%2C682&ssl=1"/>
         <div className="cardInfo">
-            <h1 className="Name">Seventh Heaven</h1>
+            <h1 className="Name">{n}</h1>
             <h3 className="Cusine">North Indian | Chinese | Continental</h3>
             <div className="RateInfo">
                 <div className="location">
@@ -37,13 +37,14 @@ export default function Body()
                     <h1>Explore Today's Favourite...</h1>
                 </div>
                 <div className="cardList">
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
+                    {Card("Seventh Heaven")}
+                    {Card("99 North")}
+                    {Card("Kaveri")}
+                    {Card("Biryani House")}
+                    {Card("Nirvana")}
+                    {Card("Chronicles")}
+                    {Card("Dine Heights")}
+                    
                 </div>
             </div>
         </div>

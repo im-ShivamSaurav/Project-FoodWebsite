@@ -45,6 +45,12 @@ body{
     color:transparent;
 }
 
+a{
+    font-family:inherit;
+    font-style:inherit;
+    text-decoration:none;
+    color:transparent;
+}
 
 .navbar li:hover{
     cursor: pointer; 
@@ -192,6 +198,11 @@ input{
 .Cusine{
     color:rgba(0, 0, 0, 0.611);
     font-family:"Roboto Condensed";
+}
+
+.Name{
+    font-family:"Pacifico";
+    font-size:24px;
 }
 
 .RateInfo{
