@@ -59,7 +59,7 @@ a{
 input{
     border: 2px solid black;
     margin:20px;
-    margin-right:-62px;
+    margin-right:-63px;
     padding:1em;
     width:500px;
     border-radius:24px;
@@ -83,6 +83,11 @@ input{
     
 }
 
+.srch-button:hover{
+    cursor:pointer;
+    background:rgba(175, 240, 240, 0.337);
+}
+
 .rootContainer{
     width:100%;
 }
@@ -99,6 +104,7 @@ input{
     border-radius:34px;
     margin-top:130px;
     margin-bottom:24px;
+    background:rgba(175, 240, 240, 0.337);
 }
 
 .img-container{
@@ -192,6 +198,11 @@ input{
     line-height:17px;
     margin:20px;
     box-shadow: 0 0 12px rgb(185, 181, 181);
+}
+
+.card:hover{
+    cursor:pointer;
+    background:rgba(175, 240, 240, 0.337);
 }
 
 .cardInfo{

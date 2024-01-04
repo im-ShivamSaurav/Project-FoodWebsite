@@ -1,6 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import resdata from "./resdata.js";
+import resdata from "./resdata";
 
 const Card = (props) => {
   const { resData } = props;

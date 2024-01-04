@@ -1,7 +1,4 @@
-import React from "react"
-import ReactDOM from "react-dom";
-
-export default function Navbar()
+function Navbar()
 {
     return(
         <div className="navbar">
@@ -23,3 +20,5 @@ export default function Navbar()
         </div>
     )
 }
+
+export default Navbar;

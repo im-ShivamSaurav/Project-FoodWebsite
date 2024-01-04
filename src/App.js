@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Navbar from "./navbar.js";
-import Body from "./body.js";
-import Footer from "./footer.js"
+import Navbar from "./components/Navbar";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
