@@ -104,7 +104,7 @@ input{
     border-radius:34px;
     margin-top:130px;
     margin-bottom:24px;
-    background:rgba(175, 240, 240, 0.337);
+    /* background:rgba(175, 240, 240, 0.337); */
 }
 
 .img-container{
