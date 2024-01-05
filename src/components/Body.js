@@ -1,9 +1,9 @@
-
+import resdata from "../utils/resdata";
 import Card from "./Card";
 import { useState, useEffect } from "react";
 
 export default function Body() {
-  const [ResList, setResList] = useState([]);
+  const [ResList, setResList] = useState(resdata);
 
   useEffect(() => {
     fetchData();
