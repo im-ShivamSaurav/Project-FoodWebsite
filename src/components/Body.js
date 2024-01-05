@@ -1,7 +1,23 @@
-import resdata from "../utils/resdata";
+
 import Card from "./Card";
+import { useState, useEffect } from "react";
 
 export default function Body() {
+  const [ResList, setResList] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+      const data = await fetch(
+        "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.3532772&lng=85.8265977&page_type=DESKTOP_WEB_LISTING"
+      );
+      const json = await data.json();
+      // console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setResList(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);     
+  };
+
   return (
     <div className="rootContainer">
       <div className="container">
@@ -22,8 +38,8 @@ export default function Body() {
           <h1>Explore Today's Favourite...</h1>
         </div>
         <div className="cardList">
-          {resdata.map((x) => (
-            <Card key={x.info.id} resData={x} />
+          {ResList?.map((x) => (
+            <Card key={x?.info.id} resData={x} />
           ))}
         </div>
       </div>

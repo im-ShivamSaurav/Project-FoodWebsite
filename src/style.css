@@ -193,9 +193,10 @@ input{
 }
 
 .card{
+    width:320px;
     background:white;
     border-radius:33px;
-    line-height:17px;
+    line-height:21px;
     margin:20px;
     box-shadow: 0 0 12px rgb(185, 181, 181);
 }
