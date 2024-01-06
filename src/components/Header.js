@@ -1,27 +1,27 @@
+import { useState } from "react";
 import { LOGO_URL } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [LogValue,setLogValue] =useState("Login");
   return (
     <div className="navbar">
       <img src={LOGO_URL} />
-      <div className="srch-cnt">
-        <div className="srch-box">
-          <input
-            id="search"
-            type="search"
-            placeholder="Type here to search..."
-          ></input>
-          <button className="srch-button">🔍</button>
-        </div>
-      </div>
       <div className="navbar-items">
         <ul>
-          <li>Home</li>
+          <li><Link to="/">
+            Home
+            </Link>
+            </li>
           <li>
-            <a href="#insta">Contact</a>
+            <Link to="/contact">Contact us</Link>
           </li>
-          <li>Profile</li>
-          <li>🛒</li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/cart">🛒</Link></li>
+          <Link to="/login">
+          <button
+            className="log-btn"
+            >{LogValue}</button></Link>
         </ul>
       </div>
     </div>

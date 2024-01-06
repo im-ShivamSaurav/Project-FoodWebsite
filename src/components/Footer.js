@@ -16,30 +16,40 @@ export default function Footer() {
             For better experience,
             <br /> download our App now
           </h1>
-        </div>
-        <img className="download-img" src={DOWNLOAD_LOGO} />
+        </div><a href="https://play.google.com/">
+        <img className="download-img" alt="Download from Play Store/App Store" src={DOWNLOAD_LOGO} 
+        onClick={(e)=>{
+          var result = confirm("You are about to leave our website and continue to some other website.Are you sure?")
+          if(!result){
+            e.preventDefault();
+          }
+        }
+
+        }/></a>
       </div>
       <div className="second">
-        <div className="connect">
-          <h1>Connect with us on...</h1>
-          <img className="icon" id="insta" src={INSTA_LOGO} />
-          <img className="icon" id="facebook" src={FACEBOOK_LOGO} />
-          <img className="icon" id="twitter" src={TWITTER_LOGO} />
-          <img className="icon" id="linkedin" src={LINKEDIN_LOGO} />
-        </div>
         <div className="aside">
-          <img className="gif" src={LOCATION_LOGO} />
+          <img className="gif" alt="Location icon" src={LOCATION_LOGO} />
         </div>
         <div className="mainfooter">
           <h2>Address:</h2>
           <p>
-            Patia,Bhubaneswar
-            <br />
+            Patia,<br/>Bhubaneswar,
+            <br />Odisha (751024)<br />
             India
           </p>
-          <br/><br/><br/>
-          <h3>©2024 Shivam.All rights reserved.</h3>
+          
         </div>
+        <div className="connect">
+          <h1>Connect with us on...</h1>
+          <img className="icon" id="insta" alt="Instagram" src={INSTA_LOGO} />
+          <img className="icon" id="facebook" alt="GitHub" src={FACEBOOK_LOGO} />
+          <img className="icon" id="twitter" alt="Twitter(X)" src={TWITTER_LOGO} />
+          <img className="icon" id="linkedin" alt="Linked IN" src={LINKEDIN_LOGO} />
+        </div>
+      </div>
+      <div className="copyright">
+      <h3>©2024 Shivam.All rights reserved.</h3>
       </div>
     </div>
   );

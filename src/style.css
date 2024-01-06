@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Orbitron:wght@400;600&family=Pacifico&family=Roboto+Condensed&family=Tangerine:wght@700&family=Yanone+Kaffeesatz:wght@700&display=swap');
 
 body{
-    margin:0;
+    margin:0 auto;
     padding:0;
     width:100%;
 }
@@ -41,7 +41,7 @@ body{
 .navbar li{
     margin:3px;
     list-style: none;
-    margin-right:70px;
+    margin-right:30px;
     color:transparent;
 }
 
@@ -49,7 +49,7 @@ a{
     font-family:inherit;
     font-style:inherit;
     text-decoration:none;
-    color:transparent;
+    color:inherit;
 }
 
 .navbar li:hover{
@@ -57,29 +57,35 @@ a{
 }
 
 input{
-    border: 2px solid black;
-    margin:20px;
-    margin-right:-63px;
+    border: 2px solid lightgray;
     padding:1em;
+    margin:20px 0;
+    margin-bottom:5px;
     width:500px;
     border-radius:24px;
-    /* border-top-left-radius:24px; */
-    /* border-bottom-left-radius:24px; */
+    border-top-left-radius:24px;
+    border-bottom-left-radius:24px;
     font-size:13px;
-    font-weight:bold;
-    padding-right:45px;
+    box-shadow: 0 0 12px rgb(185, 181, 181);
+    margin-right:-69px;
+    
 }
-
+.srch-cnt{
+    display:flex;
+    justify-content: center;
+}
 .srch-button{
-    padding:.8em;
-    margin:20px;
+    padding:.84em 1.8em;
+    margin:22px 0;
+    margin-bottom:5;
     /* margin-left:0; */
-    border-radius:50%;
-    /* border-top-right-radius:24px;
-    border-bottom-right-radius:24px; */
+    /* border-radius:50%; */
+    border-top-right-radius:24px;
+    border-bottom-right-radius:24px;
     width:auto;
-    border: 2px solid black;
+    border: 1px solid lightgray;
     background-color:whitesmoke;
+    /* box-shadow: 0 0 12px rgb(185, 181, 181); */
     
 }
 
@@ -95,129 +101,147 @@ input{
 
 .container{
     display:flex;
-    height:500px;
+    height:250px;
     background-color:white;
     width:93%;
     justify-content:space-between;
     margin:auto;
     box-shadow: 0 0 12px rgb(185, 181, 181);
     border-radius:34px;
-    margin-top:130px;
-    margin-bottom:24px;
-    /* background:rgba(175, 240, 240, 0.337); */
+    margin-top:110px;
+    margin-bottom:20px;
 }
 
 .img-container{
-    height:500px;
+    height:auto;
     width: 55%;
-    /* background-color:red; */
     background-image:url("https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?cs=srgb&dl=pexels-ella-olsson-1640772.jpg&fm=jpg");
     background-size:cover;
     border-top-left-radius:34px;
     border-bottom-left-radius:34px;
 }
+.temp{
+    color:black;
+}
 
 .text-container{
     font-family:"Monospace";
-    font-weight:700;
-    /* background-color:red; */
-    font-size:27px;
     text-align:center;
+    font-size:22px;
     width:45%;
-    align-self:center;
     background-image:linear-gradient(to right,red,blue);
     color:transparent;
-    /* -webkit-background-clip: text;     */
     background-clip:text;
+    align-content:center;
+    margin-top:23px;
 }
 
-.login-btn,.save-btn{
-    margin:15px;
-    padding:.7em;
+.rated-btn{
+    padding:    6px;
     font-size:20px;
     border:1px solid gray;
     border-radius:13px;
     background-color:transparent;
     color:transparent;
     font-weight:bold;
+    margin:0 12px;
 }
 
-.save-btn{
-    border: 1px solid blue;
-}
-.login-btn{
+.rated-btn{
     border: 1px solid red;
 }
-.login-btn:hover,.save-btn:hover{
+.rated-btn:hover{
     cursor:pointer;
     background-image:linear-gradient(to right,red,blue);
     color:white;
 }
 
-
-.temp{
-    color:black;
+.log-btn{
+    padding:6px;
+    font-size:20px;
+    border:1px solid gray;
+    border-radius:13px;
+    background-color:green;
+    color:white;
+    font-weight:bold;
+    margin:0 12px;
+    width:100px;
+    text-align: center;
+    margin-left:0;
 }
-
+.log-btn:hover{
+    cursor:pointer;
+}
 
 .Header{
-    font-size:23px;
-    padding:12px;
-    text-align:center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    font-size:20px;
     color:transparent;
     box-shadow: 0 0px 3px gray;
-    margin-top:0;
     margin:0 70px;
+    margin-top:10px;
     background-image:linear-gradient(to right,red,blue);
-    /* -webkit-background-clip: text; */
     background-clip: text;
     border-radius:34px;
-    margin-bottom:30px;
+    padding: 0 50px;
 }
 
+.filter{
+    font-size:17px;
+    margin:25px 0;
+}
+
+
 .menuImg{
-    height:200px;
-    width:320px;
+    height:51%;
+    width:100%;
+    border-radius:23px;
 }
 
 .cardList{
     display:flex;
     flex-wrap:wrap;
     justify-content:space-evenly;
-    margin:30px 70px;
-}
-
-.menuImg{
-    border-top-right-radius:33px;
-    border-top-left-radius:33px;
+    margin:30px 59px;
 }
 
 .card{
-    width:320px;
+    width:230px;
     background:white;
-    border-radius:33px;
-    line-height:21px;
-    margin:20px;
-    box-shadow: 0 0 12px rgb(185, 181, 181);
+    border-radius:23px;
+    line-height:18px;
+    height:270px;
+    margin:10px;
+    padding:4px;
 }
 
 .card:hover{
     cursor:pointer;
-    background:rgba(175, 240, 240, 0.337);
+    background:whitesmoke;
+    box-shadow: 0 0 12px rgb(185, 181, 181);
 }
 
 .cardInfo{
-    padding:0 12px;
+    padding:0 7px 7px 7px;
 }
 
 .Cusine{
+    text-wrap:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    width:100%;
+    margin-top:0;
     color:rgba(0, 0, 0, 0.611);
     font-family:"Roboto Condensed";
+    font-size:16px;
+    margin-bottom:0;
 }
 
 .Name{
     font-family:"Monospace";
-    font-size:24px;
+    font-size:19px;
 }
 
 .RateInfo{
@@ -225,7 +249,11 @@ input{
     justify-content: space-between;
     margin-right: 22px;
     margin-bottom:12px;
-    line-height:8px;
+    line-height:7px;
+    font-size:13px;
+    margin-top:2px;
+    font-family:'Times New Roman', Times, serif;
+
 }
 
 .location p{
@@ -281,6 +309,100 @@ input{
 
 .connect{
     margin:70px;
+}
+.copyright{
+    text-align: center;
+    background-color:#F2F2F2;
+    padding:23px;
+}
+
+.card-Shimmer{
+    border-radius:24px;
+    height:270px;
+    width: 230px;
+    margin:17px;
+    margin-top:0;
+    padding:4px;
+    background-color:white;
+    /* box-shadow:0 0 12px rgb(185, 181, 181); */
+}
+
+.ShimmerMenuImg{
+    height:51%;
+    width:100%;
+    border-radius:23px;
+    background-color:#f0f0f0;
+    margin:auto;
+}
+.card-Shimmer:hover{
+    cursor:pointer;
+}
+.animate{
+    animation:java 3s;
+    animation-iteration-count: infinite;
+    background: linear-gradient(to right,#e6e6e6 5%,#cccccc 25%,#e6e6e6 35%);
+    background-size:1000px 100%;
+}
+.Searchinput{
+    color:gray;
+    text-align:center;
+    font-size:23px;
+}
+
+@keyframes java {
+    from{
+        background-position:-1000px 0;
+    }
+    to{
+        background-position: 1000px 0;
+    }
+}
+
+
+.ShimmerHeading{
+    background-color:#f0f0f0;
+    height:11px;
+    width:50%;
+    padding:4px;
+    margin:23px 0;
+    border-radius:4px;
+}
+
+.ShimmerCuisine{
+    background-color:#f0f0f0;
+    height:3px;
+    width:78%;
+    margin:23px 0;
+    padding:4px;
+    border-radius:4px;
+    margin-bottom:12px;
+}
+
+.Shimmer-loc{
+    display:flex;
+    justify-content: space-between;
+    width:230px;
+    margin-left:0;
+    margin-top:0;
+}
+
+.ShimmerLocation{
+    background-color:#f0f0f0;
+    height:2px;
+    width:100px;
+    margin-top:5px;
+    padding:4px;
+    border-radius:4px;
+}
+
+.ShimmerRating{
+    background-color:#f0f0f0;
+    height:7px;
+    width:44px;
+    margin:10px 23px;
+    margin-right:8px;
+    padding:8px;
+    border-radius:4px;
 }
 
 #insta, #facebook, #twitter, #linkedin{

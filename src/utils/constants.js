@@ -6,9 +6,9 @@ export const INSTA_LOGO = "https://cdn-icons-png.flaticon.com/128/1077/1077042.p
 
 export const TWITTER_LOGO = "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/x-social-media-black-icon.png";
 
-export const FACEBOOK_LOGO = "https://cdn3.iconfinder.com/data/icons/picons-social/57/06-facebook-512.png";
+export const FACEBOOK_LOGO = "https://cdn-icons-png.flaticon.com/512/25/25231.png";
 
-export const LINKEDIN_LOGO = "https://www.iconpacks.net/icons/1/free-linkedin-icon-112-thumb.png";
+export const LINKEDIN_LOGO = "https://creazilla-store.fra1.digitaloceanspaces.com/icons/3196946/linkedin-icon-md.png";
 
 export const LOCATION_LOGO = "https://www.freeiconspng.com/thumbs/location-icon-png/location-icon-map-png--1.png";
 
