@@ -1,6 +1,6 @@
 function Shimmer() {
 
-  CardShimmer = () => (
+  const CardShimmer = () => (
     <div className="card-Shimmer">
       <div className="ShimmerMenuImg animate"></div>
       <div className="ShimmerHeading animate"></div>
