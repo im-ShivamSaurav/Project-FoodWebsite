@@ -16,6 +16,8 @@ export const DOWNLOAD_LOGO = "https://t4.ftcdn.net/jpg/03/91/88/25/360_F_3918825
 
 export const MENU_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=20.3532772&lng=85.8265977&restaurantId="
 
+export const CORS_MENU_URL = "https://corsproxy.io/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Fmenu%2Fpl%3Fpage-type%3DREGULAR_MENU%26complete-menu%3Dtrue%26lat%3D20.3532772%26lng%3D85.8265977%26restaurantId%3D"
+
 export const CONTACT_US_URL = "https://static.thenounproject.com/png/5579312-200.png";
 
 export const ERROR_URL = "https://media.istockphoto.com/id/1151564943/vector/flat-round-red-exclamation-point-icon-button-attention-symbol-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=B-xEZlTwXiqf_JRo3htjP5NV9Mts8Zp6Bro5fbQ7Mzc="

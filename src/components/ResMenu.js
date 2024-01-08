@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import RestaurantMenu from "./RestaurantMenu";
 import RestaurantDetail from "./RestaurantDetail";
 import { useParams } from "react-router-dom";
-import { MENU_URL } from "../utils/constants";
+import { MENU_URL , CORS_MENU_URL} from "../utils/constants";
 import Shimmer from "./Shimmer";
 
 const ResMenu = () => {
@@ -17,7 +17,7 @@ const ResMenu = () => {
 
   fetchData = async () => {
     const data = await fetch(
-      MENU_URL+resid
+      CORS_MENU_URL+resid
     );
     json = await data.json();
     // console.log(json);
