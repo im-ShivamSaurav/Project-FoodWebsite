@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Orbitron:wght@400;600&family=Pacifico&family=Roboto+Condensed&family=Salsa&family=Tangerine:wght@700&family=Yanone+Kaffeesatz:wght@700&display=swap');
+
+body{
+    width:100%;
+    margin:0;
+}
+
+.restaurantMenu{
+    display:flex;
+    border:2px solid black;
+    margin: 30px auto;
+    margin-top:110px;
+    border-radius:33px;
+    box-shadow: 0 0 12px rgb(213, 213, 213);
+    height:230px;
+    padding:0 45px;
+    justify-content: space-between;
+    background-color:whitesmoke;
+    align-items: center;
+    width:75%;
+}
+
+.restaurant-img{
+    padding:43px;
+    
+}
+
+.restaurant-img img{
+    border:2px solid rgba(0, 0, 0, 0.282);
+    border-radius:50%;
+    object-fit:cover;
+    width:180;
+}
+
+.menuRating{
+    border:2px solid green;
+    color:black;
+    margin:65px 34px;
+    text-align: center;
+    border-radius:12px;
+    height:100px;
+    width:100px;
+    font-family:"Salsa";
+    font-weight:bolder;
+}
+
+.menuRating h3{
+    color:green;
+    font-weight: bolder;
+}
+
+.menuRating p{
+    color:rgb(41, 39, 39);
+    font-family:"Salsa";
+    font-weight:bolder;
+    font-size:12px;
+}
+
+.restaurantName{
+    text-align:center;
+}
+
+.restaurantName h1{
+    font-family:"Roboto Condensed";
+}
+.restaurantName h5{
+    color:gray;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.restaurantName p{
+    color:gray;
+    font-family:"Happy Monkey";
+    font-weight:bold;
+}
+
+.Section{
+    width:75%;
+    box-shadow: 0 0 12px rgb(213, 213, 213);
+    padding:1em;
+    margin:20px auto;
+    border-radius:32px;
+    background-color: rgb(254, 254, 254);
+}
+
+.Section h1{
+    border:2px solid gray;
+    padding:10px 20px;
+    margin-left: 34px;
+    margin-right: 34px;
+    text-align: center;
+    border-radius:23px;
+    background:linear-gradient(to right, red, blue);
+    background-clip: text;
+    color:transparent;
+}
+
+.MenuDetail{
+    display:flex;
+    justify-content:space-between;
+    margin:10px;
+    background:whitesmoke;
+    padding:0 13px;
+    border-radius:23px;
+    box-shadow:0 0 12px rgb(213, 213, 213);
+}
+
+.MenuImg{
+    padding: 15px 23px;
+    text-align:center;
+    color:green;
+    font-family:"Salsa";
+    font-weight:bolder;
+}
+
+.MenuImg img{
+    border-radius:23px;
+    border:2px solid green;
+}
+
+.MenuText{
+    width:75%;
+    padding:23px;
+}
+
+.MenuText h2{
+    font-weight:bolder;
+    font-family:"Yanone Kaffeesatz";
+    font-size:24px;
+}
+
+.MenuText h5{
+    font-family:"Roboto Condensed";
+    font-size:12px;
+}
+
+.price{
+    font-size:20px;
+    font-family:'Times New Roman', Times, serif;
+} 
+.Form{
+    padding:30px 70px;
+    font-family:"Roboto Condensed";
+    background:linear-gradient(to right,rgb(255, 55, 198) 50%,rgb(53, 53, 255));
+    color:white; 
+    border-radius: 23px;   
+}
+
+.Formal{
+    padding:70px;
+}
+.ContactForm input{
+    width:300px;
+    margin:10px;
+    padding:5px;
+    background:transparent;
+    border:none;
+    border-bottom: 1px solid whitesmoke;
+    height:23px;
+    color:whitesmoke;
+    
+}
+
+.ContactForm input :focus{
+    border:none;
+}
+
+.ContactForm button{
+    border-radius:23px;
+    margin:34px;
+    padding:12px;
+    border:none;
+    background-color:white;
+}
+
+.contact-us{
+    margin:20px 70px;
+    margin-top:110px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    border-radius:23px;
+}
+
+.contact-us h2{
+    font-family:"Roboto Condensed"; 
+    text-align:center;
+    font-size:34px;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+}
+
+.contact-us form{
+    display:flex;
+    flex-direction: column;
+}
+
+/* Common styles for different screen sizes */
+.restaurant-img img {
+    width: 180px; /* Adjust the width for better responsiveness */
+}
+
+/* Responsive styles using media queries */
+
+/* Small screens (phones) */
+@media screen and (max-width: 637px) {
+    .restaurantMenu {
+        margin-top:200px;
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .restaurant-img {
+        padding: 15px;
+    }
+
+    .restaurant-img img {
+        width: 100%; /* Make the image fill the container */
+    }
+
+    .menuRating {
+        margin: 15px auto;
+    }
+
+    .Section {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .MenuDetail {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .MenuImg {
+        padding: 10px;
+    }
+
+    .MenuText {
+        padding: 10px;
+    }
+
+    .MenuText h2 {
+        font-size: 20px; /* Adjust the font size for better readability on small screens */
+    }
+}
+
+/* Medium screens (tablets) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Adjust styles for medium-sized screens */
+    .restaurantMenu {
+        width: 90%;
+    }
+
+    .MenuDetail {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .MenuImg {
+        padding: 15px;
+    }
+}
+
+/* Large screens (desktops) */
+@media screen and (min-width: 1025px) {
+    /* Adjust styles for large screens */
+    .restaurantMenu {
+        width: 75%;
+    }
+
+    .Section {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 496px) {
+    .restaurantMenu {
+        margin-top:250px;
+    }
+    .description {
+        /* text-wrap:nowrap; */
+        height:26px;
+        overflow:hidden;
+        width:170px;
+        text-overflow:ellipsis;
+    }
+}
+
+.ErrorMain {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: auto;
+}
+
+.error-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 120px auto;
+}
+
+.error-container h1 {
+    color: #E4011C;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.error-container p {
+    margin-top:20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.error-container img{
+    width:50%;
+}
+
+.errorLink {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.errorLink:hover {
+    background-color: #2980b9;
+}

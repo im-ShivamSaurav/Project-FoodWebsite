@@ -9,6 +9,7 @@ import Cart from "./components/Cart";
 import Error from "./components/Error";
 import Login from "./components/Login";
 import Hero from "./components/Hero";
+import ResMenu from "./components/ResMenu";
 import { createBrowserRouter,RouterProvider, Outlet } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -16,7 +17,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 const App = () => (
   <div className="main">
     <Header />
-    <Hero/> 
+    {/* <Hero/>  */}
     <Outlet/>
     <Footer />
   </div>
@@ -29,6 +30,10 @@ const AppRouter = createBrowserRouter([
     children: [
       {
         path:"/",
+        element: <Body/>
+      },
+      {
+        path:"/home",
         element: <Body/>
       },
       {
@@ -50,6 +55,10 @@ const AppRouter = createBrowserRouter([
       {
         path:"/restaurants",
         element:<Body/>
+      },
+      {
+        path: "/restaurants/:resid",
+        element: <ResMenu/>
       }
     ],
     errorElement:  <Error/>

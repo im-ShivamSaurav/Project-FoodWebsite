@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import resdata from "../utils/resdata"
+import { Link } from "react-router-dom";
 
 export default function Body() {
   const [ResList, setResList] = useState(resdata);
@@ -33,6 +34,7 @@ export default function Body() {
 
   return ResList.length == 0 ? (
     <div>
+      <Hero/>
       <div className="Header">
         <h1>Explore Today's Favourite...</h1>
       </div>
@@ -93,6 +95,7 @@ export default function Body() {
     </div>
   ) : (
     <div className="rootContainer">
+      <Hero/>
       <div className="Menu">
         <div className="Header">
           <h1>Explore Today's Favourite...</h1>
@@ -178,7 +181,7 @@ export default function Body() {
               {/* <Shimmer/> */}
             </div>
           ) : (
-            TopResList?.map((x) => <Card key={x?.info.id} resData={x} />)
+            TopResList?.map((x) =><Link to={"/restaurants/"+x?.info.id} ><Card key={x?.info.id} resData={x} /></Link>)
           )}
         </div>
       </div>

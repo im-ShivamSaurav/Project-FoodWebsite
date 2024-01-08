@@ -56,7 +56,7 @@ a{
     cursor: pointer; 
 }
 
-input{
+.srch-cnt input{
     border: 2px solid lightgray;
     padding:1em;
     margin:20px 0;

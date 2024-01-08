@@ -13,3 +13,9 @@ export const LINKEDIN_LOGO = "https://creazilla-store.fra1.digitaloceanspaces.co
 export const LOCATION_LOGO = "https://www.freeiconspng.com/thumbs/location-icon-png/location-icon-map-png--1.png";
 
 export const DOWNLOAD_LOGO = "https://t4.ftcdn.net/jpg/03/91/88/25/360_F_391882584_42M28Owo18MHXw4yNxSQ5tSjVWnnyb7s.jpg";
+
+export const MENU_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=20.3532772&lng=85.8265977&restaurantId="
+
+export const CONTACT_US_URL = "https://static.thenounproject.com/png/5579312-200.png";
+
+export const ERROR_URL = "https://media.istockphoto.com/id/1151564943/vector/flat-round-red-exclamation-point-icon-button-attention-symbol-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=B-xEZlTwXiqf_JRo3htjP5NV9Mts8Zp6Bro5fbQ7Mzc="
