@@ -15,7 +15,7 @@ const ResMenu = () => {
     fetchData();
   }, []);
 
-  fetchData = async () => {
+   const fetchData = async () => {
     const data = await fetch(
       CORS_MENU_URL+resid
     );
