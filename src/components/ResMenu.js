@@ -19,7 +19,7 @@ const ResMenu = () => {
     const data = await fetch(
       CORS_MENU_URL+resid
     );
-    json = await data.json();
+    const json = await data.json();
     // console.log(json);
 
     setResDetail(json?.data?.cards[0]?.card?.card?.info);
