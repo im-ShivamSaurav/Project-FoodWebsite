@@ -443,6 +443,9 @@ a{
     .navbar-items ul{
         flex-wrap:wrap;
     }
+    .srch-cnt input{
+        width:250px;
+    }
 }
 @media all and (max-width:950){
     .text-container,.Header{
