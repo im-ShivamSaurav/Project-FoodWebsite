@@ -12,11 +12,11 @@ export default function Contact(){
                 <div><h1>Contact Us</h1></div>
                 <form className="ContactForm">
                     <label for="email">Email:</label>
-                    <input name="email" type='email'/>
+                    <input id="email" name="email" type='email'/>
                     <label for="Name">Name:</label>
-                    <input name="Name" type="text"/>
+                    <input id= "Name" name="Name" type="text"/>
                     <label for="Message">Message:</label>
-                    <input className="message" name="Messgae" type="text"/>
+                    <input className="message" id= "Message" name="Messgae" type="text"/>
                     <button type="submit">Submit</button>
                 </form>
             </div>
