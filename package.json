@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This is the official food website of CityFood",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "start": "parcel app.html",
+    "build": "parcel build app.html",
     "test": "jest"
   },
   "repository": {

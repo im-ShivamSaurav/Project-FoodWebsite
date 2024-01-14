@@ -6,7 +6,9 @@ const Header = () => {
   const [LogValue,setLogValue] =useState("Login");
   return (
     <div className="navbar">
-      <img src={LOGO_URL} />
+      <Link to="/">
+        <img src={LOGO_URL} />
+      </Link>
       <div className="navbar-items">
         <ul>
           <li><Link to="/">

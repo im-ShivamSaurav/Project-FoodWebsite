@@ -20,7 +20,7 @@ const RestaurantDetail = (prop) => {
     </div>
     <div className="menuRating">
         <h3>⭐{avgRating}</h3>
-        <p>{totalRatings/100}K+ Ratings</p>
+        <p>{totalRatings/1000}K+ Ratings</p>
       </div>
   </div>
   )
