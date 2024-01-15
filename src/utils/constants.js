@@ -23,3 +23,5 @@ export const CONTACT_US_URL = "https://static.thenounproject.com/png/5579312-200
 export const ERROR_URL = "https://media.istockphoto.com/id/1151564943/vector/flat-round-red-exclamation-point-icon-button-attention-symbol-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=B-xEZlTwXiqf_JRo3htjP5NV9Mts8Zp6Bro5fbQ7Mzc="
 
 export const CONSTRUCTION_URL = "https://static.vecteezy.com/system/resources/thumbnails/021/413/598/original/animated-building-with-machines-website-construction-heavy-machinery-2d-cartoon-flat-characters-4k-footage-on-white-with-alpha-channel-transparency-concept-animation-for-web-design-video.jpg"
+
+export const OFFLINE_PNG = "https://cdn-icons-png.flaticon.com/512/7205/7205860.png";

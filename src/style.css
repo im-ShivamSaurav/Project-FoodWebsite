@@ -39,10 +39,9 @@ body{
 }
 
 .navbar li{
-    margin:3px;
+    /* margin:3px; */
     list-style: none;
     margin-right:30px;
-    color:transparent;
 }
 
 a{
@@ -508,5 +507,24 @@ a{
 }
 
 
+.Offline-main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin:12% auto;
+    margin-bottom:0;
+    padding:60px;
+    align-items: center;
+    width:50%;
+    flex-wrap:warp;
+}
+
+.offline-image{
+    width:100px;
+    height:100px;
+    margin-right:80px;
+    background-image:url("../Resources/offline.svg");
+    background-size: cover;
+}
 
 

@@ -8,20 +8,28 @@ import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 import Error from "./components/Error";
 import Login from "./components/Login";
-import Hero from "./components/Hero";
 import ResMenu from "./components/ResMenu";
 import { createBrowserRouter,RouterProvider, Outlet } from "react-router-dom";
+import useOnlineStatus from "./utils/useOnlineStatus";
+import Offline from "./components/Offline";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const App = () => (
-  <div className="main">
-    <Header />
-    {/* <Hero/>  */}
-    <Outlet/>
-    <Footer />
+const App = () => {
+  const OnlineValue = useOnlineStatus();
+  return OnlineValue===false?(<div>
+    <Header/>
+    <Offline/>
   </div>
-);
+  ):(
+    <div className="main">
+      <Header />
+      <Outlet/>
+      <Footer />
+    </div>
+  
+  )
+};
 
 const AppRouter = createBrowserRouter([
   {
