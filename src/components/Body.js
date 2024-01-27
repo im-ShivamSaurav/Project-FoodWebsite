@@ -18,29 +18,32 @@ export default function Body() {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://corsproxy.io/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D20.3532772%26lng%3D85.8265977%26page_type%3DDESKTOP_WEB_LISTING"
+      "https://corsproxy.io/?"+"https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
+    // console.log(json);
     // console.log(
     //   json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     // );
     setResList(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setTopResList(
-      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
-  return ResList.length == 0 ? (
+  return ResList?.length == 0 ? (
     <div>
       <Hero/>
-      <div className="Header">
-        <h1>Explore Today's Favourite...</h1>
+      <div className="Header flex p-6 m-4 mx-auto max-w-[1700px] bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent shadow-md shadow-slate-300 rounded-3xl justify-between">
+        <h1 className="hidden sm:block my-auto w-auto font-bold text-4xl">Explore Today's Favourite...</h1>
       </div>
-      <div className="srch-cnt">
+      <div className="srch-cnt my-4 sticky bg-gray-100 top-20 py-1">
+      <div className="srch-box w-[200px] sm:w-[550px] mr-auto ml-auto">
         <input
           id="search"
+          className="w-[130px] border border-gray-300 p-1 sm:p-3 rounded-l-3xl sm:w-[450px] placeholder:text-gray-300 sm:placeholder:line-clamp-1"
           type="search"
           placeholder="Search your favourite Restraunts and Dishes..."
           value={SearchValue}
@@ -62,7 +65,7 @@ export default function Body() {
           }}
         ></input>
         <button
-          className="srch-button"
+          className="srch-button border border-gray-300 bg-white p-1 sm:p-3 px-4 rounded-r-3xl hover:bg-cyan-200"
           onClick={() => {
             if (SearchValue !== "") {
               if (SearchButtonValue === "🔍") {
@@ -90,6 +93,7 @@ export default function Body() {
         >
           {SearchButtonValue}
         </button>
+        </div>
       </div>
       <Shimmer />
     </div>
@@ -97,10 +101,10 @@ export default function Body() {
     <div className="rootContainer">
       <Hero/>
       <div className="Menu">
-        <div className="Header">
-          <h1>Explore Today's Favourite...</h1>
+        <div className="Header flex p-6 m-4 mx-auto max-w-[1700px] bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent shadow-md shadow-slate-300 rounded-3xl justify-between">
+          <h1 className="hidden sm:block my-auto w-auto font-bold text-4xl">Explore Today's Favourite...</h1>
           <button
-            className="filter rated-btn"
+            className="filter rated-btn p-1 sm:p-3 font-normal rounded-xl bg-slate-40 bg-gradient-to-l from-red-600 to-blue-600 text-white shadow-md shadow-cyan-200 sm:w-52 mx-auto sm:mx-1"
             onClick={() => {
               if (filterValue === "Show all Restaurants") {
                 setTopResList(ResList);
@@ -117,10 +121,11 @@ export default function Body() {
             {filterValue}
           </button>
         </div>
-        <div className="srch-cnt">
-          <div className="srch-box">
+        <div className="srch-cnt my-4 sticky bg-gray-100 top-20 py-1">
+          <div className="srch-box w-[200px] sm:w-[550px] mr-auto ml-auto">
             <input
               id="search"
+              className="w-[130px] border border-gray-300 p-1 sm:p-3 rounded-l-3xl sm:w-[450px] placeholder:text-gray-300 sm:placeholder:line-clamp-1"
               type="search"
               placeholder="Search your favourite Restraunts and Dishes..."
               value={SearchValue}
@@ -144,7 +149,7 @@ export default function Body() {
               }}
             ></input>
             <button
-              className="srch-button"
+              className="srch-button border border-gray-300 bg-white p-1 sm:p-3 px-4 rounded-r-3xl hover:bg-cyan-200"
               onClick={() => {
                 if (SearchValue !== "") {
                   if (SearchButtonValue === "🔍") {
@@ -174,8 +179,8 @@ export default function Body() {
             </button>
           </div>
         </div>
-        <div className="cardList">
-          {TopResList.length === 0 ? (
+        <div className="cardList flex flex-wrap justify-center">
+          {TopResList?.length === 0 ? (
             <div>
               <h1 class="Seachinput">No matches found for "{SearchValue}"</h1>
               {/* <Shimmer/> */}

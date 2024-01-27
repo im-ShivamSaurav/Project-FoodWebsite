@@ -22,10 +22,16 @@ const App = () => {
     <Offline/>
   </div>
   ):(
-    <div className="main">
+    <div className="main ">
       <Header />
-      <Outlet/>
-      <Footer />
+      <div className="max-w-[1920px] mr-auto ml-auto">
+        <Outlet/>
+        
+      </div>
+      <div>
+
+        <Footer />
+      </div>
     </div>
   
   )

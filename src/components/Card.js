@@ -6,20 +6,22 @@ const Card = (props) => {
     resData?.info;
 
   return (
-    <div className="card">
-      <img className="menuImg" src={CDN_URL + cloudinaryImageId} />
-      <div className="cardInfo">
-        <h1 className="Name">{name}</h1>
-        <h4 className="Cusine">{cuisines.join(", ")}</h4>
-        <div className="RateInfo">
-          <div className="location">
+    <abbr className="decoration-transparent" title={name}>
+    <div className="flex sm:m-4 sm:block card h-70 hover:shadow-lg p-1 rounded-3xl my-2 items-center border sm:border-none">
+      <img className="menuImg w-30 h-24 sm:w-60 rounded-3xl sm:h-36" src={CDN_URL + cloudinaryImageId} />
+      <div className="cardInfo p-2 w-44">
+        <h1 className="Name text-lg sm:text-xl font-medium sm:w-56 line-clamp-1"><abbr className="decoration-transparent" title={name}>{name}</abbr></h1>
+        <h4 className="Cusine text-ellipsis overflow-hidden text-nowrap text-gray-500 font-[Roboto Condensed]]">{cuisines.join(", ")}</h4>
+        <div className="RateInfo flex justify-between my-1 mx-1 font-[Times New Roman] w-30 sm:w-60 overflow-hidden text-nowrap text-ellipsis">
+          <div className="location font-light text-sm ">
             <p>{locality}</p>
             <p>{areaName}</p>
           </div>
-          <h4>⭐{avgRating}</h4>
+          <h4 className=" text-sm font-bold py-1 p-1 sm:text-white sm:mx-3 h-fit rounded-md  sm:bg-green-600">⭐{avgRating}</h4>
         </div>
       </div>
     </div>
+      </abbr>
   );
 };
 

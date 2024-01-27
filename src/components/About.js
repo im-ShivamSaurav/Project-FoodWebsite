@@ -2,17 +2,18 @@ export default function About() {
     return (
       <div className="About">
         <div className="About me">
-          <div class="about-container">
-            <div class="project-section">
-              <h2 class="section-heading">About Food City Project😀</h2>
+          <div class="about-container bg-gradient-to-r from-blue-400 to-slate-300 rounded-xl p-3 m-4 mt-28 text-sm sm:text-base ">
+            <div class="project-section ">
+              <h2 class="section-heading font-bold">About Food City Project😀</h2>
               <p class="section-content">
                 "Food City" is a React based webApp that I created for practice. The
                 website features a configuration-driven user interface and
                 utilizes the Swiggy API to fetch restaurant and menu data. It is a
                 demo website for a food delivering company, showcasing key
                 features like a config-driven UI, routing.
+                <div className="text-sm sm:text-base">
                 <ul>
-                  😎 Key Features :
+                <p className="font-bold">😎 Key Features :</p>
                   <li>📌 Shimmer UI for Better UserExperience</li>
                   <li>📌 Search Feature</li>
                   {/* <li>📌 Checking network connection</li> */}
@@ -23,7 +24,8 @@ export default function About() {
                   </li> */}
                 </ul>
                 <ul>
-                  💻 Technologies Used :<li>📌 React </li>
+                  <p className="font-bold">💻 Technologies Used :</p>
+                    <li>📌 React </li>
                   <li>📌 Redux for State Management</li>
                   {/* <li>📌 Checking network connection</li> */}
                   <li>📌 HTML, CSS, JavaScript</li>
@@ -32,6 +34,7 @@ export default function About() {
                     📌 Implemented Lazy Loading or OnDemand Loading on This Router
                   </li> */}
                 </ul>
+                </div>
                 <div className="note">
                   <strong>Notice: Limited Menu Display</strong>
                   <p>
@@ -47,7 +50,7 @@ export default function About() {
             </div>
   
             <div class="author-section">
-              <h2 class="section-heading">About the Author - Shivam Saurav😎</h2>
+              <h2 class="section-heading font-bold">About the Author - Shivam Saurav😎</h2>
               <p class="section-content">
                 I'm Shivam Saurav, a tech enthusiast fascinated by new
                 technologies. My expertise spans languages such as C++, C, Python,

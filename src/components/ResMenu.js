@@ -17,7 +17,7 @@ const ResMenu = () => {
   },[])
 
   const fetchData = async () => {
-    const data = await fetch (MENU_URL+ resid);
+    const data = await fetch (CORS_MENU_URL+ resid);
     const json= await data.json();
   
   
@@ -26,6 +26,9 @@ const ResMenu = () => {
   setMenuDetails(
     json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards
   );
+  // console.log(
+  //   json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards
+  // );
   }
   return (
     <div>
