@@ -186,7 +186,9 @@ export default function Body() {
               {/* <Shimmer/> */}
             </div>
           ) : (
-            TopResList?.map((x) =><Link to={"/restaurants/"+x?.info.id} ><Card key={x?.info.id} resData={x} /></Link>)
+            TopResList?.map((x) =><Link to={"/restaurants/"+x?.info.id} onClick={()=>{
+              window.scrollTo(0,0);
+            }}><Card key={x?.info.id} resData={x} /></Link>)
           )}
         </div>
       </div>

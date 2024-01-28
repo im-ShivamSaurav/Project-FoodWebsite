@@ -11,22 +11,24 @@ const Header = () => {
   return (
     <div className="fixed top-0 left-0 right-0 bg-white shadow-lg shadow-slate-300 navbar flex justify-between px-4 items-center flex-wrap sm:flex-nowrap">
       <Link to="/">
-        <img className="w-20 my-3" src={mylogo} />
+        <img className="w-20 my-3" src={mylogo}  onClick={()=>{
+        window.scrollTo(0,0);
+      }} />
       </Link>
       <div className="navbar-items">
         <ul className="flex my-3 font-medium flex-wrap">
           <li className="hidden sm:block m-3 text-lg bg-gradient-to-r " style={{color:onlineValue}}>{onlineStatus===true?"Online":"Offline"}</li>
-          <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg"><Link to="/">
+          <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg"><Link to="/" onClick={()=>{window.scrollTo(0,0);}}>
             Home
             </Link>
             </li>
           <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg">
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact" onClick={()=>{window.scrollTo(0,0)}}>Contact</Link>
           </li >
-          <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg"><Link to="/about">About</Link></li>
-          <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg"><Link to="/cart">🛒</Link></li>
+          <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg" onClick={()=>{window.scrollTo(0,0);}}><Link to="/about">About</Link></li>
+          <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg" onClick={()=>{window.scrollTo(0,0);}}><Link to="/cart">🛒</Link></li>
           <Link to="/login">
-          <button
+          <button onClick={()=>{window.scrollTo(0,0);}}
             className="log-btn hidden sm:block m-3 text-lg bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white px-2 rounded-md "
             >{LogValue}</button></Link>
         </ul>

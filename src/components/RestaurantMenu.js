@@ -9,7 +9,7 @@ const RestaurantMenu = (props) => {
     <div className="Section lg:mx-80">
       <details open>
         <summary className="list-none marker:hidden">
-            <div className="flex justify-between items-center border-b p-2 border-gray-300 hover:cursor-pointer" onClick={()=>{
+            <div className="flex justify-between items-center border-b p-2 border-gray-300 hover:cursor-pointer " onClick={()=>{
                 if(dropValue==="up") setDropValue("down");
                 else setDropValue("up");
             }}>
