@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   DOWNLOAD_LOGO,
   FACEBOOK_LOGO,
@@ -43,11 +44,11 @@ export default function Footer() {
         <div className="connect my-11">
           <h1 className="font-semibold text-2xl m-6 mr-0">Connect with us on...</h1>
           <div className="flex my-6">
-          <i class="fa-brands fa-instagram m-3 scale-125 bg-black text-white p-3 rounded-full text-2xl hover:cursor-pointer"></i>
-          <i class="fa-brands fa-twitter m-3 scale-125 bg-black text-white p-3 rounded-full text-2xl hover:cursor-pointer"></i>
-          <i class="fa-brands fa-linkedin m-3 scale-125 bg-black text-white p-3 rounded-full text-2xl hover:cursor-pointer"></i>
+          <Link to="https://instagram.com/im.shivam_17"><i class="fa-brands fa-instagram m-3 scale-125 bg-black text-white p-3 rounded-full text-2xl hover:cursor-pointer"></i></Link>
+          <Link to="https://twitter.com/im_ShivamSaurav"><i class="fa-brands fa-twitter m-3 scale-125 bg-black text-white p-3 rounded-full text-2xl hover:cursor-pointer"></i></Link>
+          <Link to="https://www.linkedin.com/in/shivam-saurav/" ><i class="fa-brands fa-linkedin m-3 scale-125 bg-black text-white p-3 rounded-full text-2xl hover:cursor-pointer"></i></Link>
           {/* <i class="fa-brands fa-youtube m-3 scale-125 bg-black text-white p-3 rounded-full text-3xl"></i> */}
-          <i class="fa-brands fa-github m-3 scale-125 bg-black text-white p-3 rounded-full text-2xl hover:cursor-pointer"></i>
+          <Link to="https://github.com/im-ShivamSaurav"><i class="fa-brands fa-github m-3 scale-125 bg-black text-white p-3 rounded-full text-2xl hover:cursor-pointer"></i></Link>
           </div>
         </div>
       </div>
