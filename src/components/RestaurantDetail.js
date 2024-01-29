@@ -34,7 +34,7 @@ const RestaurantDetail = (props) => {
       </div> */}
       <div className="menuRating border border-gray-300 rounded-xl py-4 px-1 text-center text-green-600 font-bold text-lg">
         <h3 className="border-b border-gray-300 pb-2">⭐{avgRating}</h3>
-        <p className="italic font-semibold text-sm mt-1 p-1">{totalRatings / 1000}K+ Ratings</p>
+        <p className="font-normal italic text-gray-400 text-sm mt-1 p-1">{totalRatings / 1000}K+ Ratings</p>
       </div>
       </div>
       <p className="bg-slate-300 text-center  font-semibold">

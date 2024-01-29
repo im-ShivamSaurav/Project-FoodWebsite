@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
 import {
   DOWNLOAD_LOGO,
-  FACEBOOK_LOGO,
-  INSTA_LOGO,
-  LINKEDIN_LOGO,
-  LOCATION_LOGO,
-  TWITTER_LOGO,
 } from "../utils/constants";
 
 export default function Footer() {

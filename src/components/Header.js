@@ -17,7 +17,7 @@ const Header = () => {
       </Link>
       <div className="navbar-items">
         <ul className="flex my-3 font-medium flex-wrap">
-          <li className="hidden sm:block m-3 text-lg bg-gradient-to-r " style={{color:onlineValue}}>{onlineStatus===true?"Online":"Offline"}</li>
+          <li className="hidden sm:block m-3 text-lg bg-gradient-to-r hover:cursor-not-allowed select-none" style={{color:onlineValue}}>{onlineStatus===true?"Online":"Offline"}</li>
           <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg"><Link to="/" onClick={()=>{window.scrollTo(0,0);}}>
             Home
             </Link>

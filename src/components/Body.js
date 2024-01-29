@@ -51,9 +51,11 @@ export default function Body() {
             setSearchValue(e.target.value);
           }}
           onKeyDown={(e) => {
+            
             if (e.key == "Enter") {
-              const SearchList = ResList.filter((e) =>
-                e.info.name.toLowerCase().includes(SearchValue.toLowerCase())
+              window.scrollTo(0,500);
+              const SearchList = ResList.filter((e) =>(
+                e.info.name.toLowerCase().includes(SearchValue.toLowerCase())||e.info.cuisines.toLowerCase().includes(SearchValue.toLowerCase()))
               );
               setTopResList(SearchList);
               if (SearchValue.length === 0) {
@@ -67,6 +69,7 @@ export default function Body() {
         <button
           className="srch-button border border-gray-300 bg-white p-1 sm:p-3 px-4 rounded-r-3xl hover:bg-cyan-200"
           onClick={() => {
+            window.scrollTo(0,500);
             if (SearchValue !== "") {
               if (SearchButtonValue === "🔍") {
                 const SearchList = ResList.filter(
@@ -75,7 +78,7 @@ export default function Body() {
                       .toLowerCase()
                       .includes(SearchValue.toLowerCase()) ||
                     e.info.cuisines.map((i) =>
-                      i.toLowerCase.includes(SearchValue.toLowerCase())
+                      i.toLowerCase().includes(SearchValue.toLowerCase())
                     )
                 );
                 setTopResList(SearchList);
@@ -102,7 +105,7 @@ export default function Body() {
       <Hero/>
       <div className="Menu">
         <div className="Header flex p-6 m-4 mx-auto max-w-[1700px] bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent shadow-md shadow-slate-300 rounded-3xl justify-between">
-          <h1 className="hidden sm:block my-auto w-auto font-bold text-4xl">Explore Today's Favourite...</h1>
+          <h1 className="hidden sm:block my-auto w-auto font-bold text-4xl select-none">Explore Today's Favourite...</h1>
           <button
             className="filter rated-btn p-1 sm:p-3 font-normal rounded-xl bg-slate-40 bg-gradient-to-l from-red-600 to-blue-600 text-white shadow-md shadow-cyan-200 sm:w-52 mx-auto sm:mx-1"
             onClick={() => {
@@ -134,10 +137,12 @@ export default function Body() {
               }}
               onKeyDown={(e) => {
                 if (e.key == "Enter") {
-                  const SearchList = ResList.filter((e) =>
+                  window.scrollTo(0,500);
+                  const SearchList = ResList.filter((e) =>(
                     e.info.name
                       .toLowerCase()
-                      .includes(SearchValue.toLowerCase())
+                      .includes(SearchValue.toLowerCase())|| e.info.cuisines.join(", ").toLowerCase()
+                      .includes(SearchValue.toLowerCase()))
                   );
                   setTopResList(SearchList);
                   if (SearchValue.length === 0) {
@@ -151,16 +156,15 @@ export default function Body() {
             <button
               className="srch-button border border-gray-300 bg-white p-1 sm:p-3 px-4 rounded-r-3xl hover:bg-cyan-200"
               onClick={() => {
+                window.scrollTo(0,500);
                 if (SearchValue !== "") {
                   if (SearchButtonValue === "🔍") {
                     const SearchList = ResList.filter(
-                      (e) =>
+                      (e) =>(
                         e.info.name
                           .toLowerCase()
                           .includes(SearchValue.toLowerCase()) ||
-                        e.info.cuisines.map((i) =>
-                          i.toLowerCase.includes(SearchValue.toLowerCase())
-                        )
+                        e?.info?.cuisines?.join(", ").toLowerCase().includes(SearchValue.toLowerCase()))
                     );
                     setTopResList(SearchList);
                     setSearchButtonValue("❌");
