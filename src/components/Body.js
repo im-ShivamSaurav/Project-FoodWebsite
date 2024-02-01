@@ -18,7 +18,7 @@ export default function Body() {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://corsproxy.io/?"+"https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING"
+      "https://corsproxy.io/?"+encodeURIComponent("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&page_type=DESKTOP_WEB_LISTING")
     );
     const json = await data.json();
     // console.log(json);
@@ -33,7 +33,7 @@ export default function Body() {
     );
   };
 
-  return ResList?.length == 0 ? (
+  return ResList?.length === 0 ? (
     <div>
       <Hero/>
       <div className="Header flex p-6 m-4 mx-auto max-w-[1700px] bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent shadow-md shadow-slate-300 rounded-3xl justify-between">
