@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="container mt-28 flex content-center max-w-[1700] mx-auto my-8 rounded-3xl shadow-lg justify-between text-center">
+    <div className="container mt-20 sm:mt-24 flex content-center max-w-[1700] mx-auto sm:my-8 rounded-3xl shadow-lg justify-between text-center">
       <div className="hidden sm:block img-container  w-[55%]">
         <img className="rounded-l-3xl object-cover w-full h-[300px]" src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?cs=srgb&dl=pexels-ella-olsson-1640772.jpg&fm=jpg"/>
       </div>

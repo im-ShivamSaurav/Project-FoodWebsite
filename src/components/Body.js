@@ -104,7 +104,7 @@ export default function Body() {
     <div className="rootContainer">
       <Hero/>
       <div className="Menu">
-        <div className="Header flex p-6 m-4 mx-auto max-w-[1700px] bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent shadow-md shadow-slate-300 rounded-3xl justify-between">
+        <div className="hidden Header sm:flex p-6 m-4 mx-auto max-w-[1700px] bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent shadow-md shadow-slate-300 rounded-3xl justify-between">
           <h1 className="hidden sm:block my-auto w-auto font-bold text-4xl select-none">Explore Today's Favourite...</h1>
           <button
             className="filter rated-btn p-1 sm:p-3 font-normal rounded-xl bg-slate-40 bg-gradient-to-l from-red-600 to-blue-600 text-white shadow-md shadow-cyan-200 sm:w-52 mx-auto sm:mx-1"
@@ -124,11 +124,11 @@ export default function Body() {
             {filterValue}
           </button>
         </div>
-        <div className="srch-cnt my-4 sticky bg-gray-100 top-20 py-1">
-          <div className="srch-box w-[200px] sm:w-[550px] mr-auto ml-auto">
+        <div className="srch-cnt my-4 bg-gray-100 top-12 py-1">
+          <div className="srch-box w-[280px] sm:w-[550px] mr-auto ml-auto">
             <input
               id="search"
-              className="w-[130px] border border-gray-300 p-1 sm:p-3 rounded-l-3xl sm:w-[450px] placeholder:text-gray-300 sm:placeholder:line-clamp-1"
+              className="w-[200px] border border-gray-300 p-1 sm:p-3 rounded-l-3xl sm:w-[450px] placeholder:text-gray-300 sm:placeholder:line-clamp-1"
               type="search"
               placeholder="Search your favourite Restraunts and Dishes..."
               value={SearchValue}
