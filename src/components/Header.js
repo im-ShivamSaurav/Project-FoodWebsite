@@ -27,8 +27,8 @@ const Header = () => {
       </Link>
       <div className="navbar-items flex items-center">
       <p className="block m-3 text-lg font-medium bg-gradient-to-r hover:cursor-not-allowed select-none transition-all duration-300" style={{color:onlineValue}}>{onlineStatus===true?"Online":"Offline"}</p>
-      <div className="md:hidden font-bold text-3xl " onClick={handleClick}>{flag===false?<RxHamburgerMenu />:<RxCross2 />}</div>
-        <ul className="hidden sm:flex-row my-3 font-medium flex-wrap">
+      <div className="sm:hidden font-bold text-3xl " onClick={handleClick}>{flag===false?<RxHamburgerMenu />:<RxCross2 />}</div>
+        <ul className="hidden sm:flex my-3 font-medium flex-wrap">
           <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg"><Link to="/" onClick={()=>{window.scrollTo(0,0);}}>
             Home
             </Link>
