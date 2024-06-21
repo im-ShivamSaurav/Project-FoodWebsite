@@ -17,7 +17,7 @@ const Card = (props) => {
             <p>{locality}</p>
             <p>{areaName}</p>
           </div>
-          <h4 className=" text-sm font-bold py-1 p-1 sm:text-white sm:mx-3 h-fit rounded-md  sm:bg-green-600">⭐{avgRating}</h4>
+          <h4 className=" text-sm font-bold py-1 p-1 sm:text-white sm:mx-3 h-fit rounded-md bg-[#09C090]">⭐{avgRating}</h4>
         </div>
       </div>
     </div>

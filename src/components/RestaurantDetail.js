@@ -43,7 +43,7 @@ const RestaurantDetail = (props) => {
           </p>
           <div className="restaurant-img">
         <img
-          className="rounded-3xl hidden lg:block lg:absolute lg:top-[120px] lg:left-[3%] lg:w-[14%] lg:-z-10 lg:border-4 lg:border-cyan-200 lg:shadow-2xl lg:shadow-cyan-200 lg:p-2"
+          className="rounded-3xl hidden lg:block lg:absolute lg:top-[120px] lg:left-[3%] lg:w-[14%] lg:-z-10 lg:border-4 lg:border-[#09C090] lg:shadow-2xl lg:shadow-cyan-200 lg:p-2"
           alt={name}
           src={CDN_URL + cloudinaryImageId}
         />

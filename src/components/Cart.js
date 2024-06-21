@@ -1,22 +1,23 @@
-import React from 'react'
-import Hero from './Hero'
-import { CONSTRUCTION_URL } from '../utils/constants'
+import React from "react";
+import MenuCard from "./MenuCard";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
+  const cartItems = useSelector((store) => store.cart.items);
+  // console.log(cartItems);
+  console.log(cartItems);
   return (
     <div>
-      <Hero/>
-      <div class="container-construction flex flex-col m-4 items-center px-3 justify-between">
+      <div className="mt-24">
+        <div className="text-red-500 text-5xl text-center font-extrabold">Cart</div>
         <div>
-
-        <h1 className="font-bold text-center text-xl">Page Under Construction!!</h1>
-        <p>We promise...we are seriously working on it. Thanks for your curiosity!</p>
+          {cartItems?.map((i) => (
+          <MenuCard key={i?.card?.info?.id} MenuC={i} />
+        ))}
         </div>
-        <img class="construction-image w-96" src={CONSTRUCTION_URL} alt="Under Construction"/>
+      </div>
     </div>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Cart
+export default Cart;

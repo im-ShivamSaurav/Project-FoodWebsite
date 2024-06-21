@@ -12,27 +12,34 @@ import ResMenu from "./components/ResMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import useOnlineStatus from "./utils/useOnlineStatus";
 import Offline from "./components/Offline";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const App = () => {
   const OnlineValue = useOnlineStatus();
-  return OnlineValue === false ? (
+
+  return (
+    <Provider store={appStore}>
+    {OnlineValue === false ? (
     <div>
       <Header />
       <Offline />
     </div>
   ) : (
     <div>
-      <Header />
+      
       <div className="max-w-[1920px] mr-auto ml-auto">
         <Outlet />
       </div>
 
-      <Footer />
+      
     </div>
-  );
-};
+  )}
+  </Provider>
+)
+}
 
 const AppRouter = createBrowserRouter([
   {
@@ -42,23 +49,23 @@ const AppRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Body />,
+        element: [<Header />,<Body />,<Footer />]
       },
       {
         path: "/home",
-        element: <Body />,
+        element:[<Header />,<Body />,<Footer />],
       },
       {
         path: "/about",
-        element: <About />,
+        element: [<Header />,<About />,<Footer />],
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: [<Header />,<Contact />,<Footer />],
       },
       {
         path: "/cart",
-        element: <Cart />,
+        element:[<Header />,<Cart />] ,
       },
       {
         path: "/login",
@@ -66,11 +73,11 @@ const AppRouter = createBrowserRouter([
       },
       {
         path: "/restaurants",
-        element: <Body />,
+        element: [<Header />,<Body />,<Footer />],
       },
       {
         path: "/restaurants/:resid",
-        element: <ResMenu />,
+        element: [<Header/>,<ResMenu />],
       },
     ],
   },

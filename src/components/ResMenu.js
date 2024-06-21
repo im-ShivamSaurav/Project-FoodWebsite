@@ -10,6 +10,9 @@ const ResMenu = () => {
   const [ResDetail, setResDetail] = useState([]);
   const [MenuDetails, setMenuDetails] = useState([]);
 
+
+  const [showIndex, setShowIndex] = useState(0);
+
   const { resid } = useParams();
 
   useEffect(()=>{
@@ -22,21 +25,19 @@ const ResMenu = () => {
   
   
 
-  setResDetail(json?.data?.cards[0]?.card?.card?.info);
+  setResDetail(json?.data?.cards[2]?.card?.card?.info);
   setMenuDetails(
-    json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards
+    json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards
   );
-  // console.log(
-  //   json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-  // );
   }
+  
   return (
     <div>
       <RestaurantDetail ResDetail={ResDetail} />
       {MenuDetails === undefined || MenuDetails.length === 0 ? (
         <Shimmer />
       ) : (
-        MenuDetails.slice(1).map((e, i) => <RestaurantMenu key={i} resM={e} />)
+        MenuDetails?.slice(1)?.map((e, i) => <RestaurantMenu key={i} resM={e} showIndex ={showIndex==i?true:false} setShowIndex={()=>{showIndex==i?setShowIndex(null):setShowIndex(i)}}/>)
       )}
     </div>
   );

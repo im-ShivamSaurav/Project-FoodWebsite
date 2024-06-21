@@ -4,10 +4,17 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
+import { useSelector } from "react-redux";
+
 const Header = () => {
   const [LogValue,setLogValue] =useState("Login");
   const [flag, setFlag] = useState(false);
   const onlineStatus = useOnlineStatus(); 
+
+  // Subscribing to the store using a Selector
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
+
   var onlineValue="green";
   onlineStatus===true?(onlineValue="green"):(onlineValue="red")
   const handleClick=()=>{
@@ -37,7 +44,7 @@ const Header = () => {
             <Link to="/contact" onClick={()=>{window.scrollTo(0,0)}}>Contact</Link>
           </li >
           <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg" onClick={()=>{window.scrollTo(0,0);}}><Link to="/about">About</Link></li>
-          <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg" onClick={()=>{window.scrollTo(0,0);}}><Link to="/cart">🛒</Link></li>
+          <li className="mx-1 my-3 sm:m-3 text-xs sm:text-lg" onClick={()=>{window.scrollTo(0,0);}}><Link to="/cart">Cart{cartItems.length==0?"":`(${cartItems.length})`}</Link></li>
           <Link to="/login">
           <button onClick={()=>{window.scrollTo(0,0);}}
             className="log-btn hidden sm:block m-3 text-lg bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white px-2 rounded-md "
